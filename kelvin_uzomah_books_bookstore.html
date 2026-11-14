@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Uzomah Books | Personal Development and Practical Digital Resources</title>
+    <meta name="description" content="Explore practical ebooks and digital resources by Kelvin Uzomah. Discover books on personal development, relationships, parenting, financial growth, health, business and career development.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: {
+                            DEFAULT: '#111111',
+                            dark: '#0a0a0a',
+                            light: '#202020'
+                        },
+                        ivory: {
+                            DEFAULT: '#F8F6F1',
+                            light: '#FFFFFF',
+                            warm: '#E8DFD0'
+                        },
+                        gold: {
+                            DEFAULT: '#C5A46D',
+                            light: '#D4B886',
+                            dark: '#A38452'
+                        },
+                        muted: '#777777'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F6F1;
+            color: #202020;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .book-shadow {
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3), 0 10px 20px -15px rgba(197, 164, 109, 0.2);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F6F1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A46D;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-white">
+
+    <!-- SECTION 1: TOP ANNOUNCEMENT BAR -->
+    <div class="bg-charcoal text-gold text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 border-b border-gold/20">
+        <i class="fa-solid fa-sparkles text-gold"></i>
+        <span>Discover practical books and digital resources for personal and professional growth.</span>
+    </div>
+
+    <!-- SECTION 2: HEADER AND NAVIGATION -->
+    <header id="sticky-header" class="sticky top-0 z-50 bg-ivory/95 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col group">
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-charcoal group-hover:text-gold transition-colors">
+                    KELVIN UZOMAH BOOKS
+                </span>
+                <span class="text-[10px] tracking-[0.25em] text-muted uppercase font-medium">Publishing & Digital Resources</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-charcoal">
+                <a href="#" class="hover:text-gold transition-colors">Home</a>
+                <a href="#about" class="hover:text-gold transition-colors">About the Author</a>
+                <a href="#bookstore" class="hover:text-gold transition-colors">Bookstore</a>
+                <a href="#categories" class="hover:text-gold transition-colors">Categories</a>
+                <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+            </nav>
+
+            <!-- Right Side Action & Search Trigger -->
+            <div class="hidden md:flex items-center space-x-4">
+                <button onclick="document.getElementById('bookstore').scrollIntoView({behavior: 'smooth'}); document.getElementById('search-input').focus();" class="text-charcoal hover:text-gold p-2 transition-colors" title="Search books">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                </button>
+                <a href="https://kelvinuzomahbooks.selar.com/" target="_blank" rel="noopener noreferrer" class="bg-charcoal hover:bg-gold text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 shadow-sm flex items-center gap-2">
+                    <span>Explore Books</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <div class="flex items-center space-x-3 lg:hidden">
+                <button onclick="document.getElementById('bookstore').scrollIntoView({behavior: 'smooth'}); document.getElementById('search-input').focus();" class="text-charcoal p-2">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                </button>
+                <button id="mobile-menu-btn" class="text-charcoal focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-ivory border-b border-gold/20 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#" class="block text-base font-medium text-charcoal hover:text-gold">Home</a>
+            <a href="#about" class="block text-base font-medium text-charcoal hover:text-gold">About the Author</a>
+            <a href="#bookstore" class="block text-base font-medium text-charcoal hover:text-gold">Bookstore</a>
+            <a href="#categories" class="block text-base font-medium text-charcoal hover:text-gold">Categories</a>
+            <a href="#faq" class="block text-base font-medium text-charcoal hover:text-gold">FAQ</a>
+            <a href="#contact" class="block text-base font-medium text-charcoal hover:text-gold">Contact</a>
+            <div class="pt-4 border-t border-gold/20">
+                <a href="https://kelvinuzomahbooks.selar.com/" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-charcoal hover:bg-gold text-white py-3 rounded-full font-medium transition-colors">
+                    Explore Our Bookstore
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 3: HERO SECTION -->
+    <section class="relative bg-charcoal text-white overflow-hidden py-20 lg:py-32">
+        <!-- Background subtle glow elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Hero Text & CTAs -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-bookmark"></i>
+                        <span>Welcome to Kelvin Uzomah Books</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-white">
+                        Knowledge That Inspires Growth. <span class="text-gold italic font-normal">Books That Help You Move Forward.</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Discover practical books and digital resources designed to help you develop yourself, strengthen relationships, raise responsible children, manage your finances, and build a better future.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://kelvinuzomahbooks.selar.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gold hover:bg-gold-light text-charcoal font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg text-center flex items-center justify-center gap-3">
+                            <span>EXPLORE OUR BOOKSTORE</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="w-full sm:w-auto border border-white/30 hover:border-gold text-white hover:text-gold font-medium px-8 py-4 rounded-full transition-all duration-300 text-center">
+                            MEET THE AUTHOR
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: 3D Book Showcase -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md h-[420px] flex items-center justify-center">
+                        <!-- Backdrop card glow -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gold/20 to-transparent rounded-2xl filter blur-xl"></div>
+                        
+                        <!-- Floating Book 1 (Left Back) -->
+                        <div class="absolute -left-4 sm:left-0 top-12 w-36 sm:w-44 transform -rotate-6 transition-transform hover:rotate-0 duration-500 book-shadow rounded-lg overflow-hidden bg-white/5 border border-white/10">
+                            <img src="https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/starting_from_zero_front_page" alt="Starting From Zero" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=Starting+From+Zero'">
+                        </div>
+
+                        <!-- Floating Book 3 (Right Back) -->
+                        <div class="absolute -right-4 sm:right-0 top-16 w-36 sm:w-44 transform rotate-6 transition-transform hover:rotate-0 duration-500 book-shadow rounded-lg overflow-hidden bg-white/5 border border-white/10">
+                            <img src="https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/WhatsApp_Image_2026-10-09_at_3.35.11_PM" alt="Raise Them To Stand" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=Raise+Them+To+Stand'">
+                        </div>
+
+                        <!-- Main Flagship Book (Center Front) -->
+                        <div class="relative z-20 w-48 sm:w-60 transform hover:scale-105 transition-transform duration-500 book-shadow rounded-lg overflow-hidden border-2 border-gold/40">
+                            <img src="https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/the_mind_reset_h" alt="The Mind Reset" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=The+Mind+Reset'">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: BRAND INTRODUCTION -->
+    <section class="py-20 lg:py-28 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Publishing Mission</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">
+                    Knowledge for Every Stage of Life.
+                </h2>
+                <p class="text-muted text-base sm:text-lg leading-relaxed">
+                    Life presents different challenges. From personal growth and relationships to parenting, financial decisions, and business development, the choices we make influence the direction of our lives.
+                </p>
+                <p class="text-charcoal text-base sm:text-lg font-medium leading-relaxed">
+                    At Kelvin Uzomah Books, we bring together practical books and digital resources designed to help readers understand important subjects, make better decisions and take meaningful steps towards personal and professional growth.
+                </p>
+            </div>
+
+            <!-- 4 Small Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 hover:border-gold transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-ivory rounded-lg flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-3">Personal Growth</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Clear insights and practical methods to overcome self-limiting beliefs, manage overwhelming thoughts, and build better habits.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 hover:border-gold transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-ivory rounded-lg flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-3">Relationships and Family</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Thoughtful guidance on communication, emotional maturity, building healthy bonds, and effective parenting principles.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 hover:border-gold transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-ivory rounded-lg flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-3">Financial and Business Development</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Resources focused on financial discipline, responsible resource management, and startup tools for aspiring entrepreneurs.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 hover:border-gold transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-ivory rounded-lg flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-3">Learning and Professional Growth</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        AI toolkits, career resume guides, and digital materials designed to boost productivity and professional capability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FEATURED BOOKS -->
+    <section class="py-20 lg:py-28 bg-white border-y border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-gold font-semibold uppercase tracking-widest text-xs">Curated Selection</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal mt-2">Discover Our Featured Books</h2>
+                </div>
+                <p class="text-muted max-w-md mt-4 md:mt-0 text-sm sm:text-base">
+                    Explore some of our selected books and discover practical ideas that can support your personal journey.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Featured 1: The Mind Reset -->
+                <div class="bg-ivory rounded-xl overflow-hidden card-shadow border border-gold/20 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-80 bg-charcoal/5 flex items-center justify-center p-6 overflow-hidden relative">
+                            <div class="absolute top-3 left-3 bg-gold text-charcoal font-semibold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Flagship Book</div>
+                            <img src="https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/the_mind_reset_h" alt="The Mind Reset" class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 book-shadow" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=The+Mind+Reset'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="text-xs text-gold font-semibold uppercase tracking-wider">Personal Development</span>
+                            <h3 class="font-serif text-xl font-bold text-charcoal">THE MIND RESET</h3>
+                            <p class="text-muted text-sm line-clamp-3">
+                                Explore practical ways to manage overwhelming thoughts, develop healthier habits and approach life's challenges with greater clarity.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center gap-3">
+                        <button onclick="openModalById(1)" class="flex-1 bg-ivory-warm hover:bg-gold hover:text-white text-charcoal font-medium py-2.5 rounded-lg text-sm transition-colors border border-gold/30">
+                            View Details
+                        </button>
+                        <a href="https://kelvinuzomahbooks.selar.com/9x82949j27" target="_blank" rel="noopener noreferrer" class="flex-1 bg-charcoal hover:bg-gold text-white font-medium py-2.5 rounded-lg text-sm transition-colors text-center">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured 2: Starting From Zero -->
+                <div class="bg-ivory rounded-xl overflow-hidden card-shadow border border-gold/20 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-80 bg-charcoal/5 flex items-center justify-center p-6 overflow-hidden relative">
+                            <div class="absolute top-3 left-3 bg-charcoal text-gold font-semibold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Bestseller</div>
+                            <img src="https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/starting_from_zero_front_page" alt="Starting From Zero" class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 book-shadow" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=Starting+From+Zero'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="text-xs text-gold font-semibold uppercase tracking-wider">Personal Development</span>
+                            <h3 class="font-serif text-xl font-bold text-charcoal">STARTING FROM ZERO</h3>
+                            <p class="text-muted text-sm line-clamp-3">
+                                Learn the importance of new beginnings, small steps and consistent effort when building a better future.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center gap-3">
+                        <button onclick="openModalById(2)" class="flex-1 bg-ivory-warm hover:bg-gold hover:text-white text-charcoal font-medium py-2.5 rounded-lg text-sm transition-colors border border-gold/30">
+                            View Details
+                        </button>
+                        <a href="https://kelvinuzomahbooks.selar.com/0067ph0x6q" target="_blank" rel="noopener noreferrer" class="flex-1 bg-charcoal hover:bg-gold text-white font-medium py-2.5 rounded-lg text-sm transition-colors text-center">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured 3: Raise Them To Stand -->
+                <div class="bg-ivory rounded-xl overflow-hidden card-shadow border border-gold/20 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-80 bg-charcoal/5 flex items-center justify-center p-6 overflow-hidden relative">
+                            <div class="absolute top-3 left-3 bg-charcoal text-gold font-semibold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Parenting Guide</div>
+                            <img src="https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/WhatsApp_Image_2026-10-09_at_3.35.11_PM" alt="Raise Them To Stand" class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 book-shadow" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=Raise+Them+To+Stand'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="text-xs text-gold font-semibold uppercase tracking-wider">Parenting and Family</span>
+                            <h3 class="font-serif text-xl font-bold text-charcoal">RAISE THEM TO STAND</h3>
+                            <p class="text-muted text-sm line-clamp-3">
+                                Explore practical parenting principles that encourage independence, responsibility, financial discipline and self reliance in children.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center gap-3">
+                        <button onclick="openModalById(10)" class="flex-1 bg-ivory-warm hover:bg-gold hover:text-white text-charcoal font-medium py-2.5 rounded-lg text-sm transition-colors border border-gold/30">
+                            View Details
+                        </button>
+                        <a href="https://kelvinuzomahbooks.selar.com/850t577335" target="_blank" rel="noopener noreferrer" class="flex-1 bg-charcoal hover:bg-gold text-white font-medium py-2.5 rounded-lg text-sm transition-colors text-center">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: SHOP BY CATEGORY -->
+    <section id="categories" class="py-20 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Explore Topics</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Shop by Category</h2>
+                <p class="text-muted text-base">Click any category to instantly filter the complete bookstore collection.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <button onclick="filterByCategory('All')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group active-cat">
+                    <i class="fa-solid fa-book-open text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">All Products</h3>
+                </button>
+                <button onclick="filterByCategory('Personal Development')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group">
+                    <i class="fa-solid fa-seedling text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">Personal Development</h3>
+                </button>
+                <button onclick="filterByCategory('Relationships')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group">
+                    <i class="fa-solid fa-heart text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">Relationships</h3>
+                </button>
+                <button onclick="filterByCategory('Parenting and Family')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group">
+                    <i class="fa-solid fa-people-roof text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">Parenting & Family</h3>
+                </button>
+                <button onclick="filterByCategory('Health and Personal Wellbeing')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group">
+                    <i class="fa-solid fa-heart-pulse text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">Health & Wellbeing</h3>
+                </button>
+                <button onclick="filterByCategory('Financial Development')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group">
+                    <i class="fa-solid fa-wallet text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">Financial Development</h3>
+                </button>
+                <button onclick="filterByCategory('Business Development')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group">
+                    <i class="fa-solid fa-briefcase text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">Business Development</h3>
+                </button>
+                <button onclick="filterByCategory('Technology and Digital Skills')" class="category-btn bg-white hover:bg-gold hover:text-white text-charcoal p-6 rounded-xl card-shadow border border-gold/20 text-center transition-all duration-300 group">
+                    <i class="fa-solid fa-microchip text-2xl text-gold group-hover:text-white mb-3 transition-colors"></i>
+                    <h3 class="font-medium text-sm sm:text-base">Tech & Digital Skills</h3>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: COMPLETE BOOKSTORE -->
+    <section id="bookstore" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Online Bookstore</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">Explore the Complete Collection</h2>
+                <p class="text-muted text-base sm:text-lg">
+                    Find the books and digital resources that match your interests, goals and current needs. All 16 available editions.
+                </p>
+
+                <!-- Search bar and active category counter -->
+                <div class="pt-6 max-w-xl mx-auto">
+                    <div class="relative">
+                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-muted"></i>
+                        <input type="text" id="search-input" oninput="handleSearch()" placeholder="Search books by title, description or topic..." class="w-full bg-ivory border border-gold/30 rounded-full pl-12 pr-4 py-3.5 text-sm sm:text-base text-charcoal focus:outline-none focus:border-gold transition-colors shadow-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Javascript will dynamically inject all 16 products here -->
+            </div>
+
+            <!-- No results state -->
+            <div id="no-results" class="hidden text-center py-20 space-y-4">
+                <i class="fa-solid fa-book-bookmark text-4xl text-gold"></i>
+                <h3 class="font-serif text-2xl font-bold text-charcoal">No books found</h3>
+                <p class="text-muted">We couldn't find any resources matching your search or category filter. Try clearing your search.</p>
+                <button onclick="resetFilters()" class="bg-charcoal text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gold transition-colors">
+                    Reset All Filters
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: WHY CHOOSE KELVIN UZOMAH BOOKS? -->
+    <section class="py-20 lg:py-28 bg-ivory border-y border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Our Value</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">More Than Books. Practical Knowledge for Everyday Life.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 space-y-4">
+                    <div class="w-12 h-12 bg-ivory rounded-lg flex items-center justify-center text-gold text-xl font-bold">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal">PRACTICAL KNOWLEDGE</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Resources focused on everyday challenges, decisions and personal growth.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 space-y-4">
+                    <div class="w-12 h-12 bg-ivory rounded-lg flex items-center justify-center text-gold text-xl font-bold">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal">PERSONAL DEVELOPMENT</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Ideas that encourage self awareness, responsibility and continuous improvement.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 space-y-4">
+                    <div class="w-12 h-12 bg-ivory rounded-lg flex items-center justify-center text-gold text-xl font-bold">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal">RELATIONSHIP EDUCATION</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Explore communication, emotional maturity and healthier relationships.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 space-y-4">
+                    <div class="w-12 h-12 bg-ivory rounded-lg flex items-center justify-center text-gold text-xl font-bold">
+                        <i class="fa-solid fa-children"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal">PARENTING RESOURCES</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Discover practical ideas for raising responsible and independent children.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 space-y-4">
+                    <div class="w-12 h-12 bg-ivory rounded-lg flex items-center justify-center text-gold text-xl font-bold">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal">FINANCIAL AWARENESS</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Learn about financial discipline and making better decisions with available resources.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-8 rounded-xl card-shadow border border-gold/20 space-y-4">
+                    <div class="w-12 h-12 bg-ivory rounded-lg flex items-center justify-center text-gold text-xl font-bold">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal">BUSINESS AND CAREER RESOURCES</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Discover digital tools and practical materials for professional and business development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: ABOUT THE AUTHOR -->
+    <section id="about" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Author Image/Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md bg-ivory p-6 rounded-2xl border border-gold/30 card-shadow">
+                        <div class="aspect-[4/5] bg-charcoal rounded-xl overflow-hidden flex items-center justify-center relative">
+                            <!-- Placeholder or editorial badge since no raw author photo file was provided in prompt -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-center text-white space-y-1">
+                                <h3 class="font-serif text-2xl font-bold text-gold">Kelvin Uzomah</h3>
+                                <p class="text-xs tracking-widest uppercase text-gray-300">Author & Developer</p>
+                            </div>
+                            <div class="text-gold text-6xl opacity-20">
+                                <i class="fa-solid fa-feather"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Bio -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-gold font-semibold uppercase tracking-widest text-xs">Meet The Author</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Kelvin Uzomah</h2>
+                    
+                    <div class="space-y-4 text-muted text-base sm:text-lg leading-relaxed">
+                        <p>
+                            Kelvin Uzomah is an author and developer with interests in personal development, relationships, parenting, technology and practical problem solving.
+                        </p>
+                        <p>
+                            His writing explores everyday experiences and the decisions that shape how people live, relate to others and approach their future.
+                        </p>
+                        <p>
+                            Through his books and digital resources, he aims to make useful ideas easier to understand and apply. His work encourages readers to think more clearly, take responsibility for their choices, develop healthier habits and continue learning.
+                        </p>
+                    </div>
+
+                    <blockquote class="border-l-4 border-gold pl-4 py-2 italic font-serif text-charcoal text-lg">
+                        "The goal is not simply to read more books. It is to use what you learn to make better decisions."
+                    </blockquote>
+
+                    <div class="pt-4">
+                        <a href="https://kelvinuzomahbooks.selar.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-charcoal hover:bg-gold text-white font-medium px-8 py-3.5 rounded-full transition-colors">
+                            <span>EXPLORE ALL BOOKS</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FOLLOW THE AUTHOR -->
+    <section class="py-20 bg-ivory border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <div class="max-w-2xl mx-auto space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Social Community</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Stay Connected. Keep Learning.</h2>
+                <p class="text-muted text-base">
+                    Follow Kelvin Uzomah for practical insights, book updates, educational content and ideas about personal development, relationships, parenting and everyday life.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+                <a href="https://web.facebook.com/kelvinuzomahbooks" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-gold hover:text-white text-charcoal w-14 h-14 rounded-full flex items-center justify-center text-xl card-shadow border border-gold/20 transition-all duration-300">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://tiktok.com/@kelvinuzomah" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-gold hover:text-white text-charcoal w-14 h-14 rounded-full flex items-center justify-center text-xl card-shadow border border-gold/20 transition-all duration-300">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.youtube.com/@breenofyno" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-gold hover:text-white text-charcoal w-14 h-14 rounded-full flex items-center justify-center text-xl card-shadow border border-gold/20 transition-all duration-300">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kelvin-uzomah-645a8ba3" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-gold hover:text-white text-charcoal w-14 h-14 rounded-full flex items-center justify-center text-xl card-shadow border border-gold/20 transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: FREQUENTLY ASKED QUESTIONS -->
+    <section id="faq" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Helpful Answers</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gold/20 rounded-xl overflow-hidden card-shadow bg-ivory">
+                    <button onclick="toggleFaq(1)" class="w-full flex justify-between items-center p-6 text-left font-serif font-bold text-charcoal text-lg focus:outline-none">
+                        <span>Q1. What is Kelvin Uzomah Books?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-6 text-muted text-sm sm:text-base leading-relaxed">
+                        Kelvin Uzomah Books is a digital publishing brand offering ebooks and practical digital resources across personal development, relationships, parenting, health, financial awareness, business and career development.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gold/20 rounded-xl overflow-hidden card-shadow bg-ivory">
+                    <button onclick="toggleFaq(2)" class="w-full flex justify-between items-center p-6 text-left font-serif font-bold text-charcoal text-lg focus:outline-none">
+                        <span>Q2. How can I purchase a book?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-6 text-muted text-sm sm:text-base leading-relaxed">
+                        Select the book you want and click its purchase button. You will be redirected to the corresponding Selar checkout page.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gold/20 rounded-xl overflow-hidden card-shadow bg-ivory">
+                    <button onclick="toggleFaq(3)" class="w-full flex justify-between items-center p-6 text-left font-serif font-bold text-charcoal text-lg focus:outline-none">
+                        <span>Q3. Are the books available digitally?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-6 text-muted text-sm sm:text-base leading-relaxed">
+                        The products are listed through the official Selar store. Check each product page for its available format and delivery details.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gold/20 rounded-xl overflow-hidden card-shadow bg-ivory">
+                    <button onclick="toggleFaq(4)" class="w-full flex justify-between items-center p-6 text-left font-serif font-bold text-charcoal text-lg focus:outline-none">
+                        <span>Q4. Can I access the books from outside Nigeria?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-6 text-muted text-sm sm:text-base leading-relaxed">
+                        The bookstore is intended to serve Nigerian and international readers. Available payment methods and access options are displayed on the Selar checkout page.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-gold/20 rounded-xl overflow-hidden card-shadow bg-ivory">
+                    <button onclick="toggleFaq(5)" class="w-full flex justify-between items-center p-6 text-left font-serif font-bold text-charcoal text-lg focus:outline-none">
+                        <span>Q5. Can I contact the author?</span>
+                        <i id="faq-icon-5" class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-5" class="hidden px-6 pb-6 text-muted text-sm sm:text-base leading-relaxed">
+                        Yes. Send an email to <a href="mailto:kelvinuzomahu@gmail.com" class="text-gold underline">kelvinuzomahu@gmail.com</a> or connect through the official social media accounts.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-gold/20 rounded-xl overflow-hidden card-shadow bg-ivory">
+                    <button onclick="toggleFaq(6)" class="w-full flex justify-between items-center p-6 text-left font-serif font-bold text-charcoal text-lg focus:outline-none">
+                        <span>Q6. Are the books suitable for everyone?</span>
+                        <i id="faq-icon-6" class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-6" class="hidden px-6 pb-6 text-muted text-sm sm:text-base leading-relaxed">
+                        Each book addresses a particular subject and audience. Read the product description before making a purchase to determine whether it meets your needs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: FINAL CALL TO ACTION -->
+    <section class="py-24 bg-charcoal text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+            <span class="text-gold font-semibold uppercase tracking-widest text-xs">Take Action</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight">Your Next Chapter Starts With a Decision.</h2>
+            <p class="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                Whether you want to improve yourself, build healthier relationships, raise responsible children, manage your finances or develop your business, the right knowledge can give you a useful place to begin.
+            </p>
+            <div class="pt-4">
+                <a href="https://kelvinuzomahbooks.selar.com/" target="_blank" rel="noopener noreferrer" class="bg-gold hover:bg-gold-light text-charcoal font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-xl inline-flex items-center gap-3">
+                    <span>EXPLORE THE BOOKSTORE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <p class="text-gold italic font-serif text-sm">"Invest in Knowledge. Invest in Your Future."</p>
+        </div>
+    </section>
+
+    <!-- SECTION 13: FOOTER -->
+    <footer id="contact" class="bg-charcoal-dark text-gray-400 py-16 border-t border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                
+                <!-- Col 1: Brand -->
+                <div class="lg:col-span-2 space-y-4">
+                    <span class="font-serif text-xl font-bold text-white tracking-wider block">KELVIN UZOMAH BOOKS</span>
+                    <p class="text-sm text-gray-400 max-w-sm leading-relaxed">
+                        Knowledge for Growth. Resources for Life. Ideas for a Better Future.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://web.facebook.com/kelvinuzomahbooks" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gold transition-colors"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                        <a href="https://tiktok.com/@kelvinuzomah" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gold transition-colors"><i class="fa-brands fa-tiktok text-lg"></i></a>
+                        <a href="https://www.youtube.com/@breenofyno" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gold transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/kelvin-uzomah-645a8ba3" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gold transition-colors"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="font-serif text-white font-bold text-base">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors">About the Author</a></li>
+                        <li><a href="#bookstore" class="hover:text-gold transition-colors">Bookstore</a></li>
+                        <li><a href="#categories" class="hover:text-gold transition-colors">Categories</a></li>
+                        <li><a href="#faq" class="hover:text-gold transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Official Store -->
+                <div class="space-y-4">
+                    <h4 class="font-serif text-white font-bold text-base">Official Store</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://kelvinuzomahbooks.selar.com/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">Selar Storefront</a></li>
+                        <li><a href="mailto:kelvinuzomahu@gmail.com" class="hover:text-gold transition-colors">kelvinuzomahu@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Legal & Policies -->
+                <div class="space-y-4">
+                    <h4 class="font-serif text-white font-bold text-base">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" onclick="openLegalModal('Privacy Policy'); return false;" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" onclick="openLegalModal('Terms and Conditions'); return false;" class="hover:text-gold transition-colors">Terms and Conditions</a></li>
+                        <li><a href="#" onclick="openLegalModal('Refund Policy'); return false;" class="hover:text-gold transition-colors">Refund Policy</a></li>
+                        <li><a href="#" onclick="openLegalModal('Copyright Notice'); return false;" class="hover:text-gold transition-colors">Copyright Notice</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 Kelvin Uzomah Books. All Rights Reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for International Digital Publishing.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-ivory w-full max-w-2xl rounded-2xl overflow-hidden card-shadow border border-gold/30 relative max-h-[90vh] flex flex-col">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-charcoal/10 hover:bg-charcoal hover:text-white rounded-full flex items-center justify-center text-charcoal transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modal-body" class="p-6 sm:p-8 overflow-y-auto space-y-6">
+                <!-- Dynamically populated product details -->
+            </div>
+        </div>
+    </div>
+
+    <!-- LEGAL / POLICY MODAL -->
+    <div id="legal-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-ivory w-full max-w-2xl rounded-2xl overflow-hidden card-shadow border border-gold/30 relative max-h-[90vh] flex flex-col">
+            <button onclick="closeLegalModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-charcoal/10 hover:bg-charcoal hover:text-white rounded-full flex items-center justify-center text-charcoal transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="legal-modal-body" class="p-6 sm:p-8 overflow-y-auto space-y-4">
+                <!-- Dynamically populated legal content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & PRODUCTS DATA -->
+    <script>
+        // All 16 Products Data exactly as specified
+        const products = [
+            {
+                id: 1,
+                title: "THE MIND RESET",
+                category: "Personal Development",
+                description: "Explore practical ways to manage overwhelming thoughts, develop healthier habits and approach life's challenges with greater clarity.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/the_mind_reset_h",
+                purchase: "https://kelvinuzomahbooks.selar.com/9x82949j27"
+            },
+            {
+                id: 2,
+                title: "STARTING FROM ZERO",
+                category: "Personal Development",
+                description: "Learn the importance of new beginnings, small steps and consistent effort when building a better future.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/starting_from_zero_front_page",
+                purchase: "https://kelvinuzomahbooks.selar.com/0067ph0x6q"
+            },
+            {
+                id: 3,
+                title: "AI TOOLBOX",
+                category: "Technology and Digital Skills",
+                description: "Explore artificial intelligence resources and discover practical ways to use AI tools for learning, productivity and digital work.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/ebook",
+                purchase: "https://kelvinuzomahbooks.selar.com/sr91812115"
+            },
+            {
+                id: 4,
+                title: "OLD AGE STARTS TODAY",
+                category: "Health and Personal Wellbeing",
+                description: "Explore the importance of preparing for later life and making thoughtful decisions about your future wellbeing.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/Old_Age_Starts_Today_book_cover",
+                purchase: "https://kelvinuzomahbooks.selar.com/66624026k2"
+            },
+            {
+                id: 5,
+                title: "THE LIFE YOU KEEP WAITING FOR",
+                category: "Personal Development",
+                description: "Examine your choices, rethink your approach to personal growth and start taking meaningful steps towards the future you want.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/3c96609e-edb3-4ecf-8fc7-0ebcdfa30eb8",
+                purchase: "https://kelvinuzomahbooks.selar.com/98c92cb1n1"
+            },
+            {
+                id: 6,
+                title: "GO OUR SEPARATE WAYS",
+                category: "Relationships",
+                description: "Explore the difficult realities of relationships, separation, personal boundaries and recognising when it may be time to move forward.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/Personal_development_book_cover_2",
+                purchase: "https://kelvinuzomahbooks.selar.com/5519qd3pd0"
+            },
+            {
+                id: 7,
+                title: "DECODE HIS FLIRT",
+                category: "Relationships",
+                description: "Explore flirting, romantic interest, communication and the different ways attraction may be expressed.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/Personal_development_book_cover",
+                purchase: "https://kelvinuzomahbooks.selar.com/7k67v37717"
+            },
+            {
+                id: 8,
+                title: "THE DAY YOU STOP ABANDONING YOURSELF",
+                category: "Personal Development",
+                description: "Explore self respect, personal responsibility and the importance of making choices that support your personal growth.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/Personal_development_book_cover_1",
+                purchase: "https://kelvinuzomahbooks.selar.com/27m354s710"
+            },
+            {
+                id: 9,
+                title: "THE LIFE SHE NEVER BUILT",
+                category: "Personal Development",
+                description: "Reflect on personal decisions, missed opportunities and the importance of taking responsibility for your future.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/Personal_development_book_cover_4",
+                purchase: "https://kelvinuzomahbooks.selar.com/2fh43p7f05"
+            },
+            {
+                id: 10,
+                title: "RAISE THEM TO STAND",
+                category: "Parenting and Family",
+                description: "Explore practical parenting principles that encourage independence, responsibility, financial discipline and self reliance in children.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/WhatsApp_Image_2026-10-09_at_3.35.11_PM",
+                purchase: "https://kelvinuzomahbooks.selar.com/850t577335"
+            },
+            {
+                id: 11,
+                title: "THE POTBELLY RESET",
+                category: "Health and Personal Wellbeing",
+                description: "Explore practical lifestyle choices, physical activity, food awareness and consistent habits that support better health and wellbeing.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/77353082d8e5f0a7-85756564-e182-4ca3-8f37-b6fd301e4676-1792078459",
+                purchase: "https://kelvinuzomahbooks.selar.com/96t2646579"
+            },
+            {
+                id: 12,
+                title: "LEARN TO MANAGE WHAT YOU HAVE",
+                category: "Financial Development",
+                description: "Explore financial discipline, responsible spending, better money decisions and practical ways to manage limited resources.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/LEARN_TO_MANAGE_WHAT_YOU_HAVE_book_cover",
+                purchase: "https://kelvinuzomahbooks.selar.com/81977t02f3"
+            },
+            {
+                id: 13,
+                title: "THE PERSON YOU MUST BECOME",
+                category: "Personal Development",
+                description: "Explore personal responsibility, intentional decisions, healthy habits and the importance of continuous personal growth.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/THE_PERSON_YOU_MUST_BECOME",
+                purchase: "https://kelvinuzomahbooks.selar.com/g3vy4c2qhn"
+            },
+            {
+                id: 14,
+                title: "LOVE BEYOND THE FEELINGS",
+                category: "Relationships",
+                description: "Explore the importance of communication, understanding, trust and responsibility in building healthier relationships.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/Love_beyound_the_feels_front_cover",
+                purchase: "https://kelvinuzomahbooks.selar.com/5vsj65050z"
+            },
+            {
+                id: 15,
+                title: "SEENFIRST RESUMES",
+                category: "Career Development",
+                description: "Explore professional resume resources designed to help job seekers create clear, organised and editable career documents.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/1_Hero_Cover",
+                purchase: "https://kelvinuzomahbooks.selar.com/r95k34e9s7"
+            },
+            {
+                id: 16,
+                title: "SMALL BUSINESS STARTUP KIT",
+                category: "Business Development",
+                description: "A practical business planning resource featuring guided worksheets and activities to help aspiring entrepreneurs develop and organise their business ideas.",
+                cover: "https://res.cloudinary.com/xowblqev/image/upload/f_auto,q_auto/Gemini_Generated_Image_stgdkostgdkostgd",
+                purchase: "https://kelvinuzomahbooks.selar.com/9752982715"
+            }
+        ];
+
+        let currentCategory = 'All';
+        let searchQuery = '';
+
+        // Render products into the grid
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            const noResults = document.getElementById('no-results');
+            grid.innerHTML = '';
+
+            const filtered = products.filter(p => {
+                const matchesCat = currentCategory === 'All' || p.category === currentCategory;
+                const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      p.category.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'bg-ivory rounded-xl overflow-hidden card-shadow border border-gold/20 flex flex-col justify-between group';
+                card.innerHTML = `
+                    <div>
+                        <div class="h-72 bg-charcoal/5 flex items-center justify-center p-6 overflow-hidden relative">
+                            <span class="absolute top-3 left-3 bg-charcoal text-gold font-semibold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">${p.category}</span>
+                            <img src="${p.cover}" alt="${p.title}" class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 book-shadow" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=Book+Cover'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-lg font-bold text-charcoal leading-snug">${p.title}</h3>
+                            <p class="text-muted text-xs sm:text-sm line-clamp-3">${p.description}</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center gap-2">
+                        <button onclick="openModal(${p.id})" class="flex-1 bg-white hover:bg-gold hover:text-white text-charcoal font-medium py-2.5 rounded-lg text-xs transition-colors border border-gold/30">
+                            View Details
+                        </button>
+                        <a href="${p.purchase}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-charcoal hover:bg-gold text-white font-medium py-2.5 rounded-lg text-xs transition-colors text-center">
+                            Buy Now
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter by category
+        function filterByCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-gold', 'text-white');
+                btn.classList.add('bg-white', 'text-charcoal');
+            });
+            event.currentTarget.classList.remove('bg-white', 'text-charcoal');
+            event.currentTarget.classList.add('bg-gold', 'text-white');
+            renderProducts();
+        }
+
+        // Live search handler
+        function handleSearch() {
+            searchQuery = document.getElementById('search-input').value;
+            renderProducts();
+        }
+
+        // Reset filters
+        function resetFilters() {
+            currentCategory = 'All';
+            searchQuery = '';
+            document.getElementById('search-input').value = '';
+            document.querySelectorAll('.category-btn').forEach((btn, idx) => {
+                if (idx === 0) {
+                    btn.classList.add('bg-gold', 'text-white');
+                    btn.classList.remove('bg-white', 'text-charcoal');
+                } else {
+                    btn.classList.remove('bg-gold', 'text-white');
+                    btn.classList.add('bg-white', 'text-charcoal');
+                }
+            });
+            renderProducts();
+        }
+
+        // Product Modal
+        function openModal(id) {
+            const p = products.find(item => item.id === id);
+            if (!p) return;
+
+            const modalBody = document.getElementById('modal-body');
+            modalBody.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="h-80 bg-charcoal/5 flex items-center justify-center p-4 rounded-xl">
+                        <img src="${p.cover}" alt="${p.title}" class="h-full w-auto object-contain book-shadow rounded" onerror="this.src='https://placehold.co/300x450/111111/C5A46D?text=Book+Cover'">
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-xs text-gold font-semibold uppercase tracking-wider">${p.category}</span>
+                        <h3 class="font-serif text-2xl font-bold text-charcoal">${p.title}</h3>
+                        <p class="text-muted text-sm sm:text-base leading-relaxed">${p.description}</p>
+                        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                            <a href="${p.purchase}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-charcoal hover:bg-gold text-white font-semibold py-3 rounded-xl text-sm transition-colors text-center shadow-md">
+                                Purchase on Selar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function openModalById(id) {
+            openModal(id);
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // Legal Modal
+        function openLegalModal(policyName) {
+            const legalModalBody = document.getElementById('legal-modal-body');
+            let content = "";
+
+            if (policyName === 'Privacy Policy') {
+                content = `
+                    <h3 class="font-serif text-2xl font-bold text-charcoal">Privacy Policy</h3>
+                    <p class="text-muted text-sm">Last updated: 2026</p>
+                    <p class="text-charcoal text-sm leading-relaxed">Kelvin Uzomah Books respects your privacy. When you visit our website or click through to our official Selar storefront, we ensure your browsing information is treated securely. We do not sell or trade your personal data.</p>
+                `;
+            } else if (policyName === 'Terms and Conditions') {
+                content = `
+                    <h3 class="font-serif text-2xl font-bold text-charcoal">Terms and Conditions</h3>
+                    <p class="text-muted text-sm">Last updated: 2026</p>
+                    <p class="text-charcoal text-sm leading-relaxed">By accessing Kelvin Uzomah Books, you agree to respect our intellectual property and copyright notices. All ebooks and digital resources are governed by standard digital publishing licenses.</p>
+                `;
+            } else if (policyName === 'Refund Policy') {
+                content = `
+                    <h3 class="font-serif text-2xl font-bold text-charcoal">Refund Policy</h3>
+                    <p class="text-muted text-sm">Last updated: 2026</p>
+                    <p class="text-charcoal text-sm leading-relaxed">Due to the digital nature of ebooks and downloadable resources, refund policies are handled in accordance with Selar’s standard digital product terms. Please review each product page carefully before purchase.</p>
+                `;
+            } else if (policyName === 'Copyright Notice') {
+                content = `
+                    <h3 class="font-serif text-2xl font-bold text-charcoal">Copyright Notice</h3>
+                    <p class="text-muted text-sm">© 2026 Kelvin Uzomah Books. All Rights Reserved.</p>
+                    <p class="text-charcoal text-sm leading-relaxed">All book covers, titles, descriptions, and written content on this website are protected under international copyright law. Unauthorized reproduction or distribution is strictly prohibited.</p>
+                `;
+            }
+
+            legalModalBody.innerHTML = content;
+            document.getElementById('legal-modal').classList.remove('hidden');
+        }
+
+        function closeLegalModal() {
+            document.getElementById('legal-modal').classList.add('hidden');
+        }
+
+        // FAQ Toggle
+        function toggleFaq(num) {
+            const content = document.getElementById(`faq-content-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Initialize products on load
+        window.onload = function() {
+            renderProducts();
+        };
+    </script>
+</body>
+</html>
